@@ -1,6 +1,22 @@
 <div align="center">
 
-  <h1>Proffy</h1>
+  <img src="./readme/purple-logo.svg" width="200px" /> <br />
+
+  <a href="https://www.linkedin.com/in/higordenomar/">
+      <img alt="Higor Denomar" src="https://img.shields.io/badge/-HigorDenomar-8257E5?style=flat&logo=Linkedin&logoColor=white" />
+   </a>
+  
+  <a href="https://twitter.com/higordenomar">
+    <img src="https://img.shields.io/badge/-%40higordenomar-8257E5?style=flat&logo=Twitter&logoColor=white" />
+  </a>
+
+  <a href="https://mailto:higordenomar@gmail.com">
+    <img alt="Higor Denomar" src="https://img.shields.io/badge/-higordenomar%40gmail.com-8257E5?style=flat&logo=Gmail&logoColor=white" />
+  </a>
+  
+  <a href="https://github.com/HigorDenomar/proffy/blob/master/LICENSE">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-8257E5">
+  </a>
   
   <br/>
   
@@ -38,7 +54,11 @@ This project was developed with the following technologies:
 <h2 id="running-locally"> Running locally </h2>
 
 From your command line:
+
 ```sh
+# download the repository
+> git clone https://github.com/HigorDenomar/proffy
+
 # backend
 > yarn install
 > yarn run dev
