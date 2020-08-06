@@ -1,10 +1,10 @@
 import React, { useState, FormEvent } from 'react';
-import { useHistory } from 'react-router-dom';
 
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 import Textarea from '../../components/Textarea';
 import Select from '../../components/Select';
+import Done from '../../components/Done';
 
 import warningIcon from '../../assets/images/icons/warning.svg';
 
@@ -12,8 +12,6 @@ import api from '../../services/api';
 import './styles.css';
 
 function TeacherForm() {
-  const history = useHistory();
-
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState('');
   const [whatsapp, setWhatsapp] = useState('');
@@ -21,6 +19,8 @@ function TeacherForm() {
   
   const [subject, setSubject] = useState('');
   const [cost, setCost] = useState('');
+
+  const [done, setDone] = useState(false);
 
   const [scheduleItems, setScheduleItems] = useState([
     { week_day: 0, from: '', to: '' },
@@ -50,9 +50,7 @@ function TeacherForm() {
       cost: Number(cost),
       schedule: scheduleItems
     }).then(() => {
-      alert('Cadastro realizado com sucesso!');
-
-      history.push('/');
+      setDone(true);
     }).catch(() => {
       alert('Erro no cadastro');
     });
@@ -151,13 +149,11 @@ function TeacherForm() {
                     value={scheduleItem.week_day}
                     onChange={e => setScheduleItemValue(index, 'week_day', e.target.value) }
                     options={[
-                      { value: '0', label: 'Domingo' },
                       { value: '1', label: 'Segunda-feira' },
                       { value: '2', label: 'Terça-feira' },
                       { value: '3', label: 'Quarta-feira' },
                       { value: '4', label: 'Quinta-feira' },
                       { value: '5', label: 'Sexta-feira' },
-                      { value: '6', label: 'Sábado' },
                     ]}
                   />
                   <Input
@@ -189,9 +185,11 @@ function TeacherForm() {
             <button type="submit">
               Salvar cadastro
             </button>
+            
           </footer>
         </form>
       </main>
+      {done && <Done />}
     </div>
   );
 }
