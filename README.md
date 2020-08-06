@@ -61,7 +61,7 @@ From your command line:
 
 # backend
 > yarn install
-> yarn run dev
+> yarn start
 
 # web and mobile
 > yarn install
