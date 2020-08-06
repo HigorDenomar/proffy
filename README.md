@@ -63,7 +63,7 @@ From your command line:
 > yarn install
 > yarn start
 
-# web and mobile
+# web
 > yarn install
 > yarn start
 ```
