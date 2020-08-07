@@ -3,6 +3,7 @@ import {
   View,
   Text,
   Image,
+  Linking
 } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 import { useTheme } from '@react-navigation/native';
@@ -29,6 +30,10 @@ interface TeacherItemProps {
 
 const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
   const { colors } = useTheme();
+
+  function handleLinkToWhatsapp() {
+    Linking.openURL(`whatsapp://send?phone=${teacher.whatsapp}`);
+  }
 
   return (
     <View style={[
@@ -86,6 +91,7 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
 
           <RectButton
             style={[styles.contactButton, {backgroundColor: colors.secondary}]}
+            onPress={handleLinkToWhatsapp}
           >
             <Image source={whatsappIcon} />
             <Text style={[styles.contactButtonText, {color: colors.text}]}>
