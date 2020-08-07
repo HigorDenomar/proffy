@@ -13,7 +13,21 @@ import whatsappIcon from '../../assets/images/icons/whatsapp.png';
 
 import styles from './styles';
 
-const TeacherItem: React.FC = () => {
+export interface Teacher {
+  id: number;
+  avatar: string;
+  bio: string;
+  cost: number;
+  name: string;
+  subject: string;
+  whatsapp: string;
+}
+
+interface TeacherItemProps {
+  teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
   const { colors } = useTheme();
 
   return (
@@ -27,25 +41,25 @@ const TeacherItem: React.FC = () => {
       <View style={styles.profile}>
         <Image
           style={[styles.avatar, {backgroundColor: colors.image}]}
-          source={{uri: 'https://github.com/higordenomar.png'}}
+          source={{ uri: teacher.avatar }}
         />
 
         <View style={styles.profileInfo}>
           <Text
             style={[styles.name, {color: colors.textTitle}]}
           >
-            Higor Denomar
+            { teacher.name }
           </Text>
           <Text
             style={[styles.subject, {color: colors.textBase}]}
           >
-            Matemática
+            { teacher.subject }
           </Text>
         </View>
       </View>
 
       <Text style={[styles.bio, {color: colors.textBase}]}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, qui rerum veritatis nulla maiores velit quo. Voluptatem, eveniet! Sit, temporibus.
+        { teacher.bio }
       </Text>
 
       <View
@@ -53,7 +67,7 @@ const TeacherItem: React.FC = () => {
       >
         <Text style={[styles.price, {color: colors.textBase}]}>
           Preço/Hora {'   '}
-          <Text style={[styles.priceValue, {color: colors.primary}]}>R$ 20,00</Text>
+          <Text style={[styles.priceValue, {color: colors.primary}]}>R$ { teacher.cost}</Text>
         </Text>
 
         <View style={styles.buttonsContainer}>
