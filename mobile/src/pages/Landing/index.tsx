@@ -4,7 +4,7 @@ import {
   Text,
   Image,
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { RectButton } from 'react-native-gesture-handler';
 
 import landingImg from '../../assets/images/landing.png';
@@ -19,13 +19,15 @@ function Landing() {
   const { navigate } = useNavigation();
   const [totalConnections, setTotalConnections] = useState(0);
 
-  useEffect(() => {
-    api.get('connections').then(response => {
-      const { total } = response.data;
-
-      setTotalConnections(total);
-    })
-  }, []);
+  useFocusEffect(
+    React.useCallback(() => {
+      api.get('connections').then(response => {
+        const { total } = response.data;
+  
+        setTotalConnections(total);
+      })
+    }, [])
+  );
 
   return (
     <View style={styles.container}>
