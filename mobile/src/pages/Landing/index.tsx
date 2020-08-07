@@ -22,7 +22,7 @@ function Landing() {
       <Image source={landingImg} style={styles.banner} />
       <Text style={styles.title}>
         Seja bem-vindo, {'\n'}
-        <Text style={styles.titleBold}>O que deseja fazer?</Text>
+        <Text style={styles.titleBold}> O que deseja fazer? </Text>
       </Text>
 
       <View style={styles.buttonsContainer}>
@@ -34,7 +34,7 @@ function Landing() {
 
           <Text style={styles.buttonText}>Estudar</Text>
         </RectButton>
-        
+
         <RectButton
           onPress={() => navigate('GiveClasses')}
           style={[styles.button, styles.buttonSecondary]}
