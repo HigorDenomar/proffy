@@ -40,16 +40,14 @@
 
 <div align="center">
   <img src="./readme/screenshots/mobile/landing.jpg" alt="Landing mobile" width="480" />
-  &nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="./readme/screenshots/mobile/classes.jpg" alt="Study mobile" width="480" />
-  
-  
 </div>
 <br/>&nbsp;
 
 <div align="center">
   <img src="./readme/screenshots/mobile/classes-dark.jpg" alt="Study dark mode mobile" width="480" />
-  &nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="./readme/screenshots/mobile/favorites.jpg" alt="Favorites mobile" width="480" />
 </div>
 
