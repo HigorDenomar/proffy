@@ -39,16 +39,16 @@
 <h4>Mobile:</h4>
 
 <div align="center">
-  <img src="./readme/screenshots/mobile/landing.jpg" alt="Landing mobile" width="392" />
+  <img src="./readme/screenshots/mobile/landing.jpg" alt="Landing mobile" width="397" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="./readme/screenshots/mobile/classes.jpg" alt="Study mobile" width="392" />
+  <img src="./readme/screenshots/mobile/classes.jpg" alt="Study mobile" width="397" />
 </div>
 <br/>&nbsp;
 
 <div align="center">
-  <img src="./readme/screenshots/mobile/classes-dark.jpg" alt="Study dark mode mobile" width="392" />
+  <img src="./readme/screenshots/mobile/classes-dark.jpg" alt="Study dark mode mobile" width="397" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="./readme/screenshots/mobile/favorites.jpg" alt="Favorites mobile" width="392" />
+  <img src="./readme/screenshots/mobile/favorites.jpg" alt="Favorites mobile" width="397" />
 </div>
 
 <h4>Web:</h4>
