@@ -40,7 +40,7 @@
 
 <div align="center">
   <img src="./readme/screenshots/mobile/landing.jpg" alt="Landing mobile" width="450" />
-  &nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;
   <img src="./readme/screenshots/mobile/classes.jpg" alt="Study mobile" width="450" />
   
   
