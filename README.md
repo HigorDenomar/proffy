@@ -27,29 +27,30 @@
 <br>
 
 <p align="center">
+  <a href="#screens">Screenshots</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#techs">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#running-locally">Running locally</a>
 </p>
 
 <br/>&nbsp;
 
-<h2> Screenshots </h2>
+<h2 id="screens"> Screenshots </h2>
 
 <h4>Mobile:</h4>
 
 <div align="center">
-  <img src="./readme/screenshots/mobile/landing.jpg" alt="Landing mobile" width="350" />
+  <img src="./readme/screenshots/mobile/landing.jpg" alt="Landing mobile" width="450" />
   &nbsp;&nbsp;
-  <img src="./readme/screenshots/mobile/classes.jpg" alt="Study mobile" width="350" />
+  <img src="./readme/screenshots/mobile/classes.jpg" alt="Study mobile" width="450" />
   
   
 </div>
 <br/>&nbsp;
 
 <div align="center">
-  <img src="./readme/screenshots/mobile/classes-dark.jpg" alt="Study dark mode mobile" width="350" />
+  <img src="./readme/screenshots/mobile/classes-dark.jpg" alt="Study dark mode mobile" width="450" />
   &nbsp;&nbsp;
-  <img src="./readme/screenshots/mobile/favorites.jpg" alt="Favorites mobile" width="350" />
+  <img src="./readme/screenshots/mobile/favorites.jpg" alt="Favorites mobile" width="450" />
 </div>
 
 <h4>Web:</h4>
@@ -59,7 +60,7 @@
 
 <img src="./readme/screenshots/web/study.png" alt="Study Web" />
 <br/>&nbsp;
-<img src="./readme/screenshots/web/give-classes.png" alt="Give classes Web" width="350" />
+<img src="./readme/screenshots/web/give-classes.png" alt="Give classes Web" />
 
 <h2 id="techs"> Technologies </h2>
 
