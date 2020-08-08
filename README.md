@@ -33,6 +33,33 @@
 
 <br/>&nbsp;
 
+<h2> Screenshots </h2>
+
+<h4>Mobile:</h4>
+
+<div align="center">
+  <img src="./readme/screenshots/mobile/landing.jpg" alt="Study mobile" width="290" />
+  &nbsp;&nbsp;
+  <img src="./readme/screenshots/mobile/classes.jpg" alt="Study mobile" width="290" />
+  
+  
+</div>
+<br/>&nbsp;
+
+<div align="center">
+  <img src="./readme/screenshots/mobile/classes-dark.jpg" alt="Give classes mobile" width="290" />
+  &nbsp;&nbsp;
+  <img src="./readme/screenshots/mobile/favorites.jpg" alt="Give classes mobile" width="290" />
+</div>
+
+<h4>Web:</h4>
+
+<img src="./readme/screenshots/web/landing.png" alt="Langing page Web"/>
+<br/>&nbsp;
+<img src="./readme/screenshots/web/study.png" alt="Study Web"/>
+<br/>&nbsp;
+<img src="./readme/screenshots/web/give-classes.png" alt="Give classes Web"/>
+
 <h2 id="techs"> Technologies </h2>
 
 This project was developed with the following technologies:
