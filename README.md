@@ -38,27 +38,30 @@
 <h4>Mobile:</h4>
 
 <div align="center">
-  <img src="./readme/screenshots/mobile/landing.jpg" alt="Study mobile" width="300" />
+  <img src="./readme/screenshots/mobile/landing.jpg" alt="Study mobile" width="350" />
   &nbsp;&nbsp;
-  <img src="./readme/screenshots/mobile/classes.jpg" alt="Study mobile" width="300" />
+  <img src="./readme/screenshots/mobile/classes.jpg" alt="Study mobile" width="350" />
   
   
 </div>
 <br/>&nbsp;
 
 <div align="center">
-  <img src="./readme/screenshots/mobile/classes-dark.jpg" alt="Give classes mobile" width="300" />
+  <img src="./readme/screenshots/mobile/classes-dark.jpg" alt="Give classes mobile" width="350" />
   &nbsp;&nbsp;
-  <img src="./readme/screenshots/mobile/favorites.jpg" alt="Give classes mobile" width="300" />
+  <img src="./readme/screenshots/mobile/favorites.jpg" alt="Give classes mobile" width="350" />
 </div>
 
 <h4>Web:</h4>
 
-<img src="./readme/screenshots/web/landing.png" alt="Langing page Web" width="300" />
+<img src="./readme/screenshots/web/landing.png" alt="Langing page Web" />
 <br/>&nbsp;
-<img src="./readme/screenshots/web/study.png" alt="Study Web" width="300" />
-<br/>&nbsp;
-<img src="./readme/screenshots/web/give-classes.png" alt="Give classes Web" />
+
+<div align="center">
+  <img src="./readme/screenshots/web/study.png" alt="Study Web" width="350" />
+  &nbsp;&nbsp;
+  <img src="./readme/screenshots/web/give-classes.png" alt="Give classes Web" width="350" />
+</div>
 
 <h2 id="techs"> Technologies </h2>
 
