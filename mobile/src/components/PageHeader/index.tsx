@@ -11,6 +11,7 @@ import backIcon from '../../assets/images/icons/back.png';
 import logoImg from '../../assets/images/logo.png';
 
 import styles from './styles';
+import ToggleTheme from '../ToggleTheme';
 
 interface PageHeaderProps {
   title: string;
@@ -27,8 +28,10 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, headerRight, children })
         <BorderlessButton onPress={() => navigate('Landing')}>
           <Image source={backIcon} resizeMode="contain" />
         </BorderlessButton>
-        
+
         <Image source={logoImg} resizeMode="contain" />
+        
+        <ToggleTheme />
       </View>
 
       <View style={styles.header}>

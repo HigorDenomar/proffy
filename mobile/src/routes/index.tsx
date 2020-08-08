@@ -1,34 +1,32 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-
-import Landing from '../pages/Landing';
-import GiveClasses from '../pages/GiveClasses';
-import StudyTabs from './StudyTabs';
+import { AppLoading } from 'expo';
+import { Archivo_400Regular, Archivo_700Bold, useFonts } from '@expo-google-fonts/archivo';
+import { Poppins_400Regular, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
 
 import { Light, Dark } from '../assets/themes';
+import { useThemeContext } from '../contexts/theme';
+import AppStack from './AppStack';
 
-const { Navigator, Screen } = createStackNavigator();
+function Routes () {
+  const { theme, loadTheme } = useThemeContext();
 
-function AppStack() {
-  return (
-    <NavigationContainer theme={ Light as any }>
-      <Navigator screenOptions={{ headerShown: false }}>
-        <Screen
-          name="Landing"
-          component={Landing}
-        />
-        <Screen
-          name="GiveClasses"
-          component={GiveClasses}
-        />
-        <Screen
-          name="Study"
-          component={StudyTabs}
-        />
-      </Navigator>
-    </NavigationContainer>
-  );
+  let [fontsLoaded] = useFonts({
+    Archivo_400Regular,
+    Archivo_700Bold,
+    Poppins_400Regular,
+    Poppins_600SemiBold,
+  });
+
+  if (!fontsLoaded || loadTheme) {
+    return <AppLoading />;
+  } else {
+    return (
+      <NavigationContainer theme={ theme === 'light' ? Light as any : Dark as any }>
+        <AppStack />
+      </NavigationContainer>
+    );
+  }
 }
 
-export default AppStack;
+export default Routes;
