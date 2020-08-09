@@ -41,6 +41,13 @@ function TeacherForm() {
   function handleCreateClass(e: FormEvent) {
     e.preventDefault();
 
+    const isEmpty = scheduleItems.find(item => item.week_day === 0 );
+
+    if(isEmpty?.week_day === 0 || !name || !avatar || !whatsapp || !bio || !cost ) {
+      alert('Opss...\nPreencha todos os campos');
+      return;
+    }
+
     api.post('classes', {
       name,
       avatar,
@@ -154,6 +161,7 @@ function TeacherForm() {
                       { value: '3', label: 'Quarta-feira' },
                       { value: '4', label: 'Quinta-feira' },
                       { value: '5', label: 'Sexta-feira' },
+                      { value: '6', label: 'Sábado' },
                     ]}
                   />
                   <Input
