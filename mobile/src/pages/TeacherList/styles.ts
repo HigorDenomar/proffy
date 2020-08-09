@@ -35,6 +35,14 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
 
+  picker: {
+    height: 54,
+    borderRadius: 8,
+    justifyContent: 'center',
+    marginTop: 4,
+    marginBottom: 16
+  },
+
   submitButton: {
     height: 56,
     borderRadius: 8,

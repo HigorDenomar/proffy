@@ -3,7 +3,9 @@ import {
   View,
   Text,
   ScrollView,
-  TextInput
+  TextInput,
+  Picker,
+  Alert
 } from 'react-native';
 import { BorderlessButton, RectButton } from 'react-native-gesture-handler';
 import { useTheme } from '@react-navigation/native';
@@ -42,20 +44,34 @@ function TeacherList() {
   }
 
   function handleFiltersSubmit() {
-    loadFavorites();
+    if(week_day === '0' || !subject || !time) {
+      Alert.alert(
+        'Opss...',
+        'Preencha todos os campos.',
+        [
+          { text: 'OK', onPress: () =>{  } }
+        ],
+        { cancelable: true }
+      );
 
-    api.get('classes', {
-      params: {
-        subject,
-        week_day,
-        time,
-      }
-    }).then(response => {
-      setIsFiltersVisible(false);
-      setTeachers(response.data);
-    }).catch(() => {
-      console.log('Erro ao buscar dados da api');
-    });
+      return;
+    } else {
+
+      loadFavorites();
+
+      api.get('classes', {
+        params: {
+          subject,
+          week_day,
+          time,
+        }
+      }).then(response => {
+        setIsFiltersVisible(false);
+        setTeachers(response.data);
+      }).catch(() => {
+        console.log('Erro ao buscar dados da api');
+      });
+    }
   }
 
   return (
@@ -84,13 +100,23 @@ function TeacherList() {
             <View style={styles.inputGroup}>
               <View style={styles.inputBlock}>
                 <Text style={[styles.label, {color: colors.label}]}>Dia da semana</Text>
-                <TextInput
-                  style={[styles.input, {backgroundColor: colors.input}]}
-                  value={week_day}
-                  onChangeText={text => setWeekDay(text)}
-                  placeholder="Qual o dia?"
-                  placeholderTextColor="#AAAAAA80"
-                />
+
+                <View style={[styles.picker, {backgroundColor: colors.input}]}>
+                  <Picker
+                    mode="dropdown"
+                    style={{flex: 1}}
+                    selectedValue={week_day}
+                    onValueChange={(itemValue) => setWeekDay(itemValue) }
+                  >
+                    <Picker.Item label="Qual o dia?" value="0" color="#AAAAAA80" />
+                    <Picker.Item label="Segunda" value="1" />
+                    <Picker.Item label="Terça" value="2" />
+                    <Picker.Item label="Quarta" value="3" />
+                    <Picker.Item label="Quinta" value="4" />
+                    <Picker.Item label="Sexta" value="5" />
+                    <Picker.Item label="Sábado" value="6" />
+                  </Picker>
+                </View>
               </View>
               
               <View style={styles.inputBlock}>
