@@ -44,12 +44,12 @@ function TeacherList() {
   }
 
   function handleFiltersSubmit() {
-    if(week_day === '0' || !subject || !time) {
+    if(week_day === '0' || !week_day || subject === '0' || !subject || !time) {
       Alert.alert(
         'Opss...',
         'Preencha todos os campos.',
         [
-          { text: 'OK', onPress: () =>{  } }
+          { text: 'OK', onPress: () => {} }
         ],
         { cancelable: true }
       );
@@ -66,8 +66,19 @@ function TeacherList() {
           time,
         }
       }).then(response => {
-        setIsFiltersVisible(false);
-        setTeachers(response.data);
+        if(!response.data[0]) {
+          Alert.alert(
+            'Nenhum professor encontrado',
+            'Escolha uma opção diferente.',
+            [
+              { text: 'OK', onPress: () => {} }
+            ],
+            { cancelable: true }
+          );
+        } else {
+          setIsFiltersVisible(false);
+          setTeachers(response.data);
+        }
       }).catch(() => {
         console.log('Erro ao buscar dados da api');
       });
@@ -89,13 +100,33 @@ function TeacherList() {
         { isFiltersVisible && (
           <View style={styles.searchForm}>
             <Text style={[styles.label, {color: colors.label}]}>Matéria</Text>
-            <TextInput
-              style={[styles.input, {backgroundColor: colors.input}]}
+            {/* <TextInput
+              
               value={subject}
               onChangeText={text => setSubject(text)}
               placeholder="Qual a matéria?"
               placeholderTextColor="#AAAAAA80"
-            />
+            /> */}
+
+            <View style={[styles.input, {backgroundColor: colors.input}]}>
+              <Picker
+                mode="dropdown"
+                style={{flex: 1}}
+                selectedValue={subject}
+                onValueChange={(itemValue) => setSubject(itemValue) }
+              >
+                <Picker.Item label="Qual matéria?" value="0" color="#AAAAAA80" />
+                <Picker.Item label="Artes" value="Artes" />
+                <Picker.Item label="Biologia" value="Biologia" />
+                <Picker.Item label="Ciência" value="Ciência" />
+                <Picker.Item label="Física" value="Física" />
+                <Picker.Item label="Geografia" value="Geografia" />
+                <Picker.Item label="História" value="História" />
+                <Picker.Item label="Matemática" value="Matemática" />
+                <Picker.Item label="Português" value="Português" />
+                <Picker.Item label="Química" value="Química" />
+              </Picker>
+            </View>
 
             <View style={styles.inputGroup}>
               <View style={styles.inputBlock}>
