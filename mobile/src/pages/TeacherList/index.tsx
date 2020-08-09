@@ -80,7 +80,14 @@ function TeacherList() {
           setTeachers(response.data);
         }
       }).catch(() => {
-        console.log('Erro ao buscar dados da api');
+        Alert.alert(
+          'Opss...',
+          'Houve algum erro, tente novamente.',
+          [
+            { text: 'OK', onPress: () => {} }
+          ],
+          { cancelable: true }
+        );
       });
     }
   }
