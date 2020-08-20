@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/badge/-%40higordenomar-8257E5?style=flat&logo=Twitter&logoColor=white" />
   </a>
 
-  <a href="https://mailto:higordenomar@gmail.com">
+  <a href="mailto:higordenomar@hotmail.com">
     <img alt="Higor Denomar" src="https://img.shields.io/badge/-higordenomar%40gmail.com-8257E5?style=flat&logo=Gmail&logoColor=white" />
   </a>
   
